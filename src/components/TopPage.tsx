@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreator, RootState } from "~/store";
-
+import Profile from "~/components/profile/MiniProfile"
+import Contact from "~/components/contact"
+import Works from "~/components/works"
 // ______________________________________________________
 // 型定義
 
@@ -23,7 +25,9 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      TopPage
+      <Profile />
+      <Works />
+      <Contact />
     </div>
   )
 }
@@ -32,6 +36,7 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
+color: #fff;
 `
 
 export default StyledComponent

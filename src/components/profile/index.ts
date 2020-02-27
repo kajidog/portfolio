@@ -1,5 +1,5 @@
 import ProfilePage from "./ProfilePage";
-
-export { ProfilePage };
+import MiniProfile from "./MiniProfile";
+export { ProfilePage, MiniProfile };
 
 export default ProfilePage;

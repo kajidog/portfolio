@@ -33,6 +33,7 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
+color: #000;
   & .works_page_title{
   }
 

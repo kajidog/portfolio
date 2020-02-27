@@ -10,6 +10,8 @@ export interface work {
   developmentLanguage: string[]; // 開発言語
   languageDescription?: { language: string; description: string }[];
 }
+
+// 作品情報
 const workData: work[] = [
   {
     title: "ごちナビ",
@@ -36,14 +38,13 @@ const workData: work[] = [
     developmentLanguage: ["React.js", "html", "css"]
   },
   {
-    title: "ポートフォリオサイト",
+    title: "ポートフォリオサイトテンプレート",
     url: "https://portfolio-kaji.firebaseapp.com",
-    gitUrl:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+    gitUrl: "https://github.com/KajiwaraKensei/portfolio",
     img:
       "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
     description: "",
-    simpleDescription: `このポートフォリオサイトです。作品情報や自己紹介などのデータは変数でまとめて定義しているため、メンテナンスが容易です。\nまたデータを変数で定義し、表示しているということで、他の人に配布して使用することもできます。`,
+    simpleDescription: `変数をいじるだけで自分のポートフォリオサイトが作れます。このサイトはそのテンプレートで作成しました。\nまた変数はまとめて定義しているため、メンテナンスも容易です。`,
     developmentEnvironment: ["firebase", "mac", "vsCode"],
     developmentLanguage: ["React.js", "TypeScript", "HTML", "StyledComponent"]
   }

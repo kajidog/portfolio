@@ -7,6 +7,7 @@ import { Route, Switch, useParams } from 'react-router-dom';
 import TopPage from "~/components/TopPage"
 import Works from "~/components/works"
 import Profile from "~/components/profile"
+import Contact from "~/components/contact"
 import NotFound from "~/components/NotFound";
 import AppBar from "~/components/others/AppBar"
 import Header from "~/components/others/Header"
@@ -61,6 +62,7 @@ function App() {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/works/:worksName" component={Works} />
           <Route exact path="/works" component={Works} />
+          <Route exact path="/contact" component={Contact} />
           <Route exact path="/" component={TopPage} />
           <Route component={NotFound} />
         </Switch>

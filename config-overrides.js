@@ -1,0 +1,12 @@
+// jshint esversion: 9
+
+const path = require("path");
+
+module.exports = function override(config) {
+  config.resolve = {
+    ...config.resolve,
+    alias: { "~": path.resolve(__dirname, "./src") }
+  };
+
+  return config;
+};

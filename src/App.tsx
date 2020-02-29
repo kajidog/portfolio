@@ -12,7 +12,6 @@ import NotFound from "~/components/NotFound";
 import AppBar from "~/components/others/AppBar"
 import Header from "~/components/others/Header"
 import styled from "styled-components"
-import { async } from 'q';
 
 interface StyledComponent {
   type: WindowType;

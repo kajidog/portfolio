@@ -19,7 +19,7 @@ const profileData: profile = {
   name: "梶原 健成",
   age: 21,
   img:
-    "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/01f.jpg?alt=media&token=e0f679ed-01be-4bcc-881d-45348a4cf82e",
+    "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/S__7241731.jpg?alt=media&token=5f4ccd0c-028b-4bcf-89d2-46a15e90e434",
   from: "神戸電子専門学校 ITスペシャリスト学科",
   skills: [
     "React.js",
@@ -36,7 +36,6 @@ const profileData: profile = {
   contacts: {
     email: "kd1270632@st.kobedenshi.ac.jp",
     tel: "090-2807-0449",
-    facebook: "090-2807-0449",
     twitter: "5mpjtj",
     github: "KajiwaraKensei"
   }

@@ -7,7 +7,6 @@ import { Provider } from "react-redux"
 import { initStore } from "./store";
 import { Router } from 'react-router';
 import { createBrowserHistory as createHistory } from 'history'
-
 const store = initStore();
 
 const history = createHistory()

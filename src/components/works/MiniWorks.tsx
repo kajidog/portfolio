@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreator, RootState } from "~/store";
 import { Typography } from "@material-ui/core"
-import { WorksList } from "."
-import BackButton from "~/components/others/BackHomeButton"
-
+import { MiniWorksList } from "."
 // ______________________________________________________
 // 型定義
 
@@ -26,8 +24,7 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      <WorksList />
-      <BackButton />
+      <MiniWorksList />
     </div>
   )
 }
@@ -37,8 +34,8 @@ const Component: React.FC<Props> = (props) => {
 
 const StyledComponent = styled(Component)`
 color: #000;
-  & .works_page_title{
-  }
+background-color: #fff;
+padding: .25em;
 
 `
 

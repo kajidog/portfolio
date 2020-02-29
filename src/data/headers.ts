@@ -34,7 +34,7 @@ const headers: headersType = {
   },
   top: {
     imgUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/S__7241731.jpg?alt=media&token=5f4ccd0c-028b-4bcf-89d2-46a15e90e434",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/01f.jpg?alt=media&token=e0f679ed-01be-4bcc-881d-45348a4cf82e",
     title: `${profile.name}'s portfolio`,
     subtitle: "",
     breadScraps: ["home"]

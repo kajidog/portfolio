@@ -40,10 +40,9 @@ const Component: React.FC<Props> = (props) => {
                   {title}
                 </div>
               </div>
+              <Typography variant="body1" className="header_texts_sub_title">{subtitle}</Typography>
             </div>
           </div>
-          <Typography variant="body1" className="header_texts_sub_title">{subtitle}</Typography>
-
         </div>
       </div>
     </div>

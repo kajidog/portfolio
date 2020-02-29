@@ -45,12 +45,14 @@ const Component: React.FC<Props> = (props) => {
       <Typography className={CARD_HEADING_CLASS_NAME} variant="body2">出身</Typography>
       <p className={CARD_CONTENT_CLASS_NAME}  >{profile.from}</p>
       <Divider />
-      <Link onClick={clickDetail} to="/profile">詳しく<i className="far fa-hand-point-right" /></Link>
+      <Link onClick={clickDetail} to="/profile">詳しく<i className="fas fa-arrow-right" /></Link>
     </div>
   )
   return (
     <div className={props.className}>
-      <h2>プロフィール</h2>
+      <div className="top_titles">
+        <h2>Profile</h2>
+      </div>
 
       <div className="profile_card">
         <div className="left_content">
@@ -62,7 +64,6 @@ const Component: React.FC<Props> = (props) => {
           {profileInfo}
         </div>
       </div>
-
     </div>
   )
 }
@@ -71,13 +72,14 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
-h2{
-  text-align: center;
-  margin-bottom: 0;
+& .top_titles{
+  color: #fff;
+  background-color: #b72f2f;
 }
+
   color: #fff;
   width: 100%;
-  padding: 1rem 0rem;
+  padding: .2em;
   .profile_card{
     margin: 1rem 0;
     display: flex;

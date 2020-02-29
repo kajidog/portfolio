@@ -73,8 +73,12 @@ const StyledComponent = styled(Component)`
   background-color: #fff;
   position: relative;
   display:flex;
+  flex-wrap: wrap;
   .works_item_left{
     width: 40%;
+    min-width: 15em;
+
+    flex: 1;
     & img{
       object-fit: cover;
       width: 100%;
@@ -85,6 +89,8 @@ const StyledComponent = styled(Component)`
     padding: .5em 1em;
     padding-top: 1em;
     width: 60%;
+    min-width: 15em;
+    flex: 1;
     & > div{
       display: flex;
       align-items: center;
@@ -106,7 +112,7 @@ const StyledComponent = styled(Component)`
     width: 3em;
     height: 2.5em;
     right: -.5em;
-    top: -.5em;
+    top: -1em;
     background-color:#ff5a5a;
     color: #fff;
   }
@@ -133,14 +139,6 @@ const StyledComponent = styled(Component)`
   justify-content: center;
   flex-wrap: wrap;
 }
-
-  @media only screen and (max-width: 400px){
-    display: block;
-
-    .works_item_left, .works_item_right{
-      width: 100%;
-    }
-  } 
   
 `
 

@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreator, RootState } from "~/store";
-import { Typography } from "@material-ui/core"
-import { WorksList } from "."
-import BackButton from "~/components/others/BackHomeButton"
-
+import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 // ______________________________________________________
 // 型定義
 
@@ -13,21 +11,28 @@ type Props = {
   className?: string;
 }
 
-const selector = (state: RootState) => ({})
+const selector = (state: RootState) => ({
+
+})
 // ______________________________________________________
 // コンポーネント
 
 const Component: React.FC<Props> = (props) => {
-  const reduxState = useSelector(selector);
-  const { } = reduxState;
+  const { } = useSelector(selector);
   const { } = props;
 
   const dispatch = useDispatch();
-
+  const clickDetail = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    scroll.scrollToTop({
+      duration: 500
+    });
+  }
   return (
     <div className={props.className}>
-      <WorksList />
-      <BackButton />
+      <Link to="/" onClick={clickDetail}>
+        <i className="fas fa-arrow-left" /> Homeに戻る
+      </Link>
+
     </div>
   )
 }
@@ -36,9 +41,8 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
-color: #000;
-  & .works_page_title{
-  }
+  padding: .2em;
+  color: #0196ff;
 
 `
 

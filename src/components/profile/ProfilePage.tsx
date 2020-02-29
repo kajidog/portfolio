@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { actionCreator, RootState } from "~/store";
 import profile from "~/data/profile"
 import { Typography, Divider } from "@material-ui/core"
-
+import BackButton from "~/components/others/BackHomeButton"
 // ______________________________________________________
 // 型定義
 
@@ -68,7 +68,7 @@ const Component: React.FC<Props> = (props) => {
           {profileInfo}
         </div>
       </div>
-
+      <BackButton />
     </div>
   )
 }

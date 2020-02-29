@@ -1,4 +1,4 @@
 import ContactPage from "./ContactPage";
-
-export { ContactPage };
+import MiniContact from "./MiniContact";
+export { ContactPage, MiniContact };
 export default ContactPage;

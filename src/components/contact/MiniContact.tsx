@@ -9,7 +9,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import profile from "~/data/profile"
-import BackButton from "~/components/others/BackHomeButton"
 
 // ______________________________________________________
 // 型定義
@@ -31,7 +30,9 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      <h2>連絡</h2>
+      <div className="wor_page_title top_titles">
+        <h2>Contact</h2>
+      </div>
       <List>
         <Divider />
 
@@ -118,7 +119,6 @@ const Component: React.FC<Props> = (props) => {
         )}
         <Divider />
       </List>
-      <BackButton />
     </div>
   )
 }
@@ -128,10 +128,12 @@ const Component: React.FC<Props> = (props) => {
 
 const StyledComponent = styled(Component)`
 color: #fff;
-padding: 3rem 0rem 1rem;
-& h2{
-  text-align: center;
+padding:.2em;
+& .top_titles{
+  color: #fff;
+  background-color: #b72f2f;
 }
+
 & >.MuiList-root{
     width: 90%;
     max-width: 42rem;

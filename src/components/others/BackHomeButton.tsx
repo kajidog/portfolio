@@ -41,7 +41,7 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
-  padding: .2em;
+  padding: .7em;
   color: #0196ff;
 
 `

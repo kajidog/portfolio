@@ -88,6 +88,9 @@ const StyledComponent = styled.div<StyledComponent>`
   .header_texts{
   ${props => props.clicked && `display: none;`}
   } 
+  .right-content{
+    padding-bottom: 3em;
+  }
 
   ${props => {
     switch (props.type) {
@@ -98,12 +101,15 @@ const StyledComponent = styled.div<StyledComponent>`
 
           & > .left-content,  & > .right-content{
             height: 100%;
-            width: 50%;         
             overflow-x: hidden;
             overflow-y: scroll;
           }
           & > .left-content{
             display: flex;
+            width: 45%;
+          }
+          & > .right-content{
+            width: 55%;
           }
         `
       case "phone":

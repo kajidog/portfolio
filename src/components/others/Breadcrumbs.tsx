@@ -34,10 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
+
 // ______________________________________________________
 // コンポーネント
 
@@ -48,11 +45,19 @@ const Component: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
+  const makePath = (index: number) => {
+    let path = ""
+    for (let i = 1; i <= index; i++) {
+      path += "/" + breadScraps[i];
+    }
+
+    return path || "/"
+  }
   return (
     <div className={props.className}>
       <Breadcrumbs aria-label="breadcrumb" style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: ".9em" }} separator={<NavigateNextIcon fontSize="small" />}>
-        {breadScraps.map(breadScrap => (
-          <Link key={"breadScraps_" + breadScrap} to="/" onClick={handleClick} className={classes.link}>
+        {breadScraps.map((breadScrap, i) => (
+          <Link key={"breadScraps_" + breadScrap} to={makePath(i)} className={classes.link}>
             {breadScrap}
           </Link>
         ))}

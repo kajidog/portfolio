@@ -79,7 +79,7 @@ const StyledComponent = styled(Component)`
   .works_item_left{
     width: 40%;
     min-width: 15em;
-
+    border: 1px solid #0000001f;
     flex: 1;
     & img{
       object-fit: cover;

@@ -33,8 +33,6 @@ const Component: React.FC<Props> = (props) => {
 // スタイル
 
 const StyledComponent = styled(Component)`
-color: #000;
-background-color: #fff;
 padding: .25em;
 
 `

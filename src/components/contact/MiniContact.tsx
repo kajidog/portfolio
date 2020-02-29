@@ -30,9 +30,7 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      <div className="wor_page_title top_titles">
-        <h2>Contact</h2>
-      </div>
+      <h2>Contact</h2>
       <List>
         <Divider />
 
@@ -129,6 +127,7 @@ const Component: React.FC<Props> = (props) => {
 const StyledComponent = styled(Component)`
 color: #fff;
 padding:.2em;
+text-align: center;
 & .top_titles{
   color: #fff;
   background-color: #b72f2f;

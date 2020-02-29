@@ -50,9 +50,7 @@ const Component: React.FC<Props> = (props) => {
   )
   return (
     <div className={props.className}>
-      <div className="top_titles">
-        <h2>Profile</h2>
-      </div>
+      <h2>Profile</h2>
 
       <div className="profile_card">
         <div className="left_content">
@@ -76,7 +74,7 @@ const StyledComponent = styled(Component)`
   color: #fff;
   background-color: #b72f2f;
 }
-
+  text-align: center;
   color: #fff;
   width: 100%;
   padding: .2em;

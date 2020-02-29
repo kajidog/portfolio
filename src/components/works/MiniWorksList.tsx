@@ -42,9 +42,7 @@ const Component: React.FC<Props> = (props) => {
   }
   return (
     <div className={props.className}>
-      <div className="works_page_title top_titles">
-        <h2>Works</h2>
-      </div>
+      <h2>Works</h2>
       <Slider {...settings}>
         {works.map(work => (
           <div key={"works_list_id_" + work.title} >

@@ -49,6 +49,8 @@ const StyledComponent = styled(Component)`
   text-align: center;
   .works_item_left{
     position: relative;
+    border: 1px solid #ddd;
+
     & img{
       object-fit: cover;
       width: 100%;
@@ -69,8 +71,8 @@ const StyledComponent = styled(Component)`
       background-color: rgba(0, 0, 0, .5);
       opacity: 0;
       white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+      overflow: hidden;
+      text-overflow: ellipsis;
       & *{
         margin: 0;
       }

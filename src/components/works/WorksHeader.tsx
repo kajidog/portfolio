@@ -2,18 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreator, RootState } from "~/store";
-import { WindowType } from "~/store/window"
-import headerData from "~/data/headers"
+import { work } from "~/data/works"
+import Breadcrumbs from "~/components/others/Breadcrumbs"
 import { Typography } from "@material-ui/core"
-import { paths } from "~/data/path"
-import Breadcrumbs from "./Breadcrumbs"
+import { WindowType } from "~/store/window"
+import works from "~/data/works"
+
 // ______________________________________________________
 // 型定義
 
-
 type Props = {
   className?: string;
-  path: paths;
+  work: work;
 }
 
 const selector = (state: RootState) => ({
@@ -24,14 +24,14 @@ const selector = (state: RootState) => ({
 
 const Component: React.FC<Props> = (props) => {
   const { } = useSelector(selector);
-  const { path } = props;
-
+  const { work } = props;
+  const { title, simpleDescription } = work;
   const dispatch = useDispatch();
-  const { title, subtitle, breadScraps } = headerData[path];
+
   return (
     <div className={props.className}>
       <div className="header_texts">
-        <Breadcrumbs breadScraps={breadScraps} />
+        <Breadcrumbs breadScraps={["home", "works", title]} />
         <div>
           <div className="textRevealContainer">
             <div className="textReveal rotateY">
@@ -40,7 +40,7 @@ const Component: React.FC<Props> = (props) => {
                   {title}
                 </div>
               </div>
-              <Typography variant="body1" className="header_texts_sub_title">{subtitle}</Typography>
+              <Typography variant="body1" className="header_texts_sub_title">{simpleDescription}</Typography>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ interface StyledComponent {
 }
 const StyledComponent = styled(Component) <StyledComponent>`
 transition:0.2s all ease-out;
-background-image: url("${props => headerData[props.path].imgUrl}");
+background-image: url("${props => props.work.img}");
 background-size:cover;
 background-position: center;
 background-repeat: no-repeat;

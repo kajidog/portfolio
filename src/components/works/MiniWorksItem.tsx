@@ -5,6 +5,7 @@ import { actionCreator, RootState } from "~/store";
 import { Typography, Button } from "@material-ui/core"
 import { work } from "~/data/works"
 import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
+import Link from "~/components/others/Link"
 // ______________________________________________________
 // 型定義
 
@@ -27,10 +28,12 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      <div className="works_item_left">
-        <img src={img} alt="" />
-        <div className="works_mini_item_hover"><p>{title}</p></div>
-      </div>
+      <Link to={"/works/" + title}>
+        <div className="works_item_left">
+          <img src={img} alt="" />
+          <div className="works_mini_item_hover"><p>{title}</p></div>
+        </div>
+      </Link>
     </div>
   )
 }
@@ -65,6 +68,9 @@ const StyledComponent = styled(Component)`
       color: #fff;
       background-color: rgba(0, 0, 0, .5);
       opacity: 0;
+      white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
       & *{
         margin: 0;
       }

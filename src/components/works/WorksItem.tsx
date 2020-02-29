@@ -5,6 +5,8 @@ import { actionCreator, RootState } from "~/store";
 import { Typography, Button } from "@material-ui/core"
 import { work } from "~/data/works"
 import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
+import Link from '~/components/others/Link';
+
 // ______________________________________________________
 // 型定義
 
@@ -61,7 +63,7 @@ const Component: React.FC<Props> = (props) => {
 
         </div>
       </div>
-      <div className="works_item_more_info"><ArrowForwardOutlinedIcon fontSize="small" /></div>
+      <div className="works_item_more_info"><Link to={"/works/" + title}><ArrowForwardOutlinedIcon fontSize="small" /></Link></div>
     </div>
   )
 }

@@ -10,9 +10,11 @@ import Profile from "~/components/profile"
 import Contact from "~/components/contact"
 import NotFound from "~/components/NotFound";
 import AppBar from "~/components/others/AppBar"
-import Header from "~/components/others/Header"
+import Header from "~/components/others/Header";
+import WorksHeader from "~/components/works/WorksHeader"
 import styled from "styled-components"
-
+import works from "~/data/works";
+import WorksInfo from "~/components/works/WorksInfo"
 interface StyledComponent {
   type: WindowType;
   clicked: boolean
@@ -48,18 +50,21 @@ function App() {
         <AppBar type={type} callback={clickAction} />
         <Switch>
           <Route exact path="/profile" render={() => <Header {...{ type, path: "profile" }} />} />
-          <Route exact path="/works/:worksId" render={() => <Header {...{ type, path: "works" }} />} />
+          {works.map(work => (
+            <Route exact path={"/works/" + work.title} render={() => <WorksHeader work={work} type={type} />} key={"app_header_" + work.title} />
+          ))}
           <Route exact path="/works" render={() => <Header {...{ type, path: "works" }} />} />
           <Route exact path="/contact" render={() => <Header {...{ type, path: "contact" }} />} />
           <Route exact path="/" render={() => <Header {...{ type, path: "top" }} />} />
           <Route component={NotFound} />
         </Switch>
-
       </div>
       <div className="right-content">
         <Switch>
           <Route exact path="/profile" component={Profile} />
-          <Route exact path="/works/:worksName" component={Works} />
+          {works.map(work => (
+            <Route exact path={"/works/" + work.title} render={() => <WorksInfo work={work} />} key={"app_content_" + work.title} />
+          ))}
           <Route exact path="/works" component={Works} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/" component={TopPage} />
@@ -74,7 +79,6 @@ const StyledComponent = styled.div<StyledComponent>`
   *{
     word-wrap: break-word;
     white-space: pre-wrap;
-
   }
   .MuiButton-root{
     text-transform: none;

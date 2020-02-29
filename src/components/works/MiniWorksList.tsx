@@ -25,6 +25,7 @@ const settings: Settings = {
   autoplay: true,
   speed: 500,
   slidesToScroll: 1,
+  arrows: false
 }
 // ______________________________________________________
 // コンポーネント

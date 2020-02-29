@@ -5,17 +5,15 @@ export interface work {
   gitUrl: string; // gitHubのURL
   description?: string; // 内容説明
   simpleDescription?: string; //簡易説明
-  appealPoints?: string[]; // アピールポイント
-  developmentEnvironments: string[]; // 開発環境
-  developmentLanguages: { name: string; reasons: string[] }[]; // 開発言語
-  languageDescription?: { language: string; description: string }[];
   functions?: string[]; // 機能
   differentiations?: string[]; // 差別化
-  images?: { url: string; description: string }[];
+  developmentEnvironments: string[]; // 開発環境
+  developmentLanguages: { name: string; reasons: string[] }[]; // 開発言語
+  images?: { url: string; description: string }[]; // 画像
 }
 
 // 作品情報
-export default <work[]>[
+const works: work[] = [
   {
     title: "ごちナビ",
     url: "https://whtite-bd4f.web.app/",
@@ -24,8 +22,25 @@ export default <work[]>[
       "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/gotivabi.png?alt=media&token=5c4d49c9-4411-480b-8234-ce21fbabf204",
     description: "",
     simpleDescription: ` 位置情報を取得し周辺の飲食店の情報を表示します。`,
-    developmentEnvironments: ["firebase", "React.js", "mac", "vsCode"],
-    developmentLanguages: []
+    developmentEnvironments: ["Atom", "Windows"],
+    developmentLanguages: [
+      {
+        name: "React.js",
+        reasons: ["コンポーネント指向で書くので構成が複雑になりにくい", "SPA"]
+      },
+      {
+        name: "JavaScript",
+        reasons: ["React.jsに使用"]
+      },
+      {
+        name: "Firebase",
+        reasons: ["realtime database をコメントの保存に使用"]
+      },
+      {
+        name: "ぐるなびAPI",
+        reasons: ["飲食店の情報の取得に使用"]
+      }
+    ]
   },
   {
     title: "Makers",
@@ -37,8 +52,39 @@ export default <work[]>[
       "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/makers1.png?alt=media&token=65be2fc0-7e68-4f44-adb8-9c6ee02f1fd4",
     description: "",
     simpleDescription: ` 文章をテンプレート化し、質問に答えるだけで文章が作成できます。`,
-    developmentEnvironments: ["firebase", "React.js", "mac", "vsCode"],
-    developmentLanguages: []
+    developmentEnvironments: ["mac", "VSCode"],
+    developmentLanguages: [
+      {
+        name: "Next.js",
+        reasons: [
+          "フロントエンドに使用",
+          "SSRができるということで",
+          "前にReactを勉強していて興味があったため"
+        ]
+      },
+      {
+        name: "Express",
+        reasons: ["バックエンドに使用", "簡単にAPIサーバーを作れるため"]
+      },
+      {
+        name: "TypeScript",
+        reasons: [
+          "フロントエンドとバックエンド両方に使用",
+          "変数を型で管理し、実行前になるべくエラーを出したかったため"
+        ]
+      },
+      {
+        name: "MondoDB",
+        reasons: ["Expressのデファクトスタンダードということで"]
+      },
+      {
+        name: "DockerCompose",
+        reasons: [
+          "開発環境の構築をしやすくするため",
+          "コマンド一つでフロントエンド・バックエンド・データベース全てのサーバーを起動できるようにするため"
+        ]
+      }
+    ]
   },
   {
     title: "ポートフォリオテンプレート",
@@ -95,3 +141,5 @@ export default <work[]>[
     ]
   }
 ];
+
+export default works;

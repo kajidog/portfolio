@@ -63,7 +63,7 @@ const Component: React.FC<Props> = (props) => {
 
         </div>
       </div>
-      <div className="works_item_more_info"><Link to={"/works/" + title}><ArrowForwardOutlinedIcon fontSize="small" /></Link></div>
+      <Link to={"/works/" + title}><div className="works_item_more_info"><ArrowForwardOutlinedIcon fontSize="small" /></div></Link>
     </div>
   )
 }
@@ -129,7 +129,7 @@ const StyledComponent = styled(Component)`
     color: #ff5a5a;
     border: 1px solid #ff35357a;
     &:hover{
-      border-color: 1px solid rgba(0, 102, 255, 0.05);
+      border: 1px solid #ff15157a;
     }
   }
   & .sns-button{

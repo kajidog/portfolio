@@ -20,21 +20,21 @@ const headers: headersType = {
   },
   works: {
     imgUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/S__7241734.jpg?alt=media&token=f6cc6201-1910-4405-af26-3ca626de3948",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/works.jpg?alt=media&token=ba51ea14-09cd-4c25-943d-6ec0339d1b47",
     title: "WORKS",
     subtitle: "",
     breadScraps: ["home", "works"]
   },
   contact: {
     imgUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/S__7241733.jpg?alt=media&token=2262d2bc-c103-4bb3-a071-fa9f7d5d95a8",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/contact.jpg?alt=media&token=251c267c-cfdd-476b-b675-dbf8020fc7b9",
     title: "CONTACT",
     subtitle: "",
     breadScraps: ["home", "contact"]
   },
   top: {
     imgUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/01f.jpg?alt=media&token=e0f679ed-01be-4bcc-881d-45348a4cf82e",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-kaji.appspot.com/o/top.jpg?alt=media&token=e24d60f7-5f00-4c00-b5dd-a3d6393b0465",
     title: `${profile.name}'s portfolio`,
     subtitle: "",
     breadScraps: ["home"]

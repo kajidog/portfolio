@@ -31,7 +31,7 @@ const Component: React.FC<Props> = (props) => {
 
   return (
     <div className={props.className}>
-      <h2>連絡</h2>
+      <h2>contact</h2>
       <List>
         <Divider />
 

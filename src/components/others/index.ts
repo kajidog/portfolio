@@ -1,3 +1,16 @@
 import AppBar from "./AppBar";
 import Header from "./Header";
-export { AppBar, Header };
+
+const hoge = "a"
+const h = {
+  hoge
+}
+
+
+const b = h.hoge
+
+
+export { 
+  AppBar, 
+  Header ,
+};

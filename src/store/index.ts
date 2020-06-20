@@ -3,7 +3,6 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { initialState, reducer } from "./reducer";
 import thunks from "redux-thunk";
 import * as Window from "./window";
-import * as Subject from "./subject";
 
 // ______________________________________________________
 //
@@ -20,5 +19,4 @@ export function initStore(state = initialState()) {
 }
 export const actionCreator = {
   window: Window.actionCreator,
-  subject: Subject.actionCreator
 };

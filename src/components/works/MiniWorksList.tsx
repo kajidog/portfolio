@@ -47,7 +47,7 @@ const Component: React.FC<Props> = (props) => {
         {works.map(work => (
           <div key={"works_list_id_" + work.title} >
             <MiniWorksItem work={work} />
-          </div>
+        </div>
         ))}
       </Slider>
       <div className="mini_works_list">

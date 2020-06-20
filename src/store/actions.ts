@@ -11,4 +11,3 @@ export type CreatorsToActions<T> = Unwrap<ReturnTypes<T>>;
 
 export type Actions =
   | CreatorsToActions<typeof import("./window/actions")>
-  | CreatorsToActions<typeof import("./subject/actions")>;
